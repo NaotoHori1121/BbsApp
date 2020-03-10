@@ -1,0 +1,47 @@
+package servlet;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import model.ThreadBean;
+import model.ThreadLogic;
+
+
+@WebServlet("/SelectGenreServlet")
+public class SelectGenreServlet extends HttpServlet {
+
+	private static final long serialVersionUID = 1L;
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		response.setCharacterEncoding("UTF-8");
+		int genreId = Integer.parseInt(request.getParameter("genreId"));
+		//選択されたﾌﾟﾛｸﾞﾗﾐﾝｸﾞ言語（ジャンル）のｽﾚｯﾄﾞを取得しﾘｽﾄに追加
+		List<ThreadBean>threadsOfSelectGenre = new ArrayList<>();
+		ThreadLogic bo = new ThreadLogic();
+
+		if(genreId>=1) {
+			threadsOfSelectGenre = bo.executeFindAllThreadOfSelectGenre(genreId);
+		}else {//userMainMenuで「すべて」タグを選択した場合
+			threadsOfSelectGenre = bo.executeFindAllThread();
+		}
+		request.setAttribute("threadList", threadsOfSelectGenre);
+
+		request.setAttribute("genreimg", String.valueOf(genreId)); //プログラミング言語毎の画像表示用
+		request.getRequestDispatcher("WEB-INF/jsp/userMainMenu.jsp").forward(request, response);
+	}
+
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		doGet(request, response);
+	}
+
+}

@@ -1,0 +1,89 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP');
+
+html {
+	backdrop-filter: blur(7px);
+	height: 100%;
+	width: 100%;
+	margin: 0;
+}
+
+body, .wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+body {
+	background-image: url("../image/adminbackground.jpg");
+	background-size: cover;
+	font-family: 'Noto Serif JP', sans-serif;
+	color: white;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+}
+
+.backbutton {
+	padding: 2px 17px;
+	border: solid 3px gray;
+	text-decoration: none;
+	color: black;
+	font-weight: bold;
+	font-size: 12px;
+	opacity: 0.8;
+	background-color: white;
+	border-radius: 10px;
+	margin: 10px 30px;
+}
+
+.backbutton:hover {
+	border-color: black;
+	background-color: white;
+}
+
+main {
+	width: 750px;
+	height: 200px;
+	margin: 200px auto;
+	padding: 20px;
+	text-align: center;
+	background-color: white;
+	opacity: 0.8;
+	color: black;
+	border-radius: 12px;
+}
+main ul {
+	list-style: none;
+	display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-inline-start:0;
+}
+
+.button {
+	padding: 50px 50px;
+	border: solid 3px gray;
+	text-decoration: none;
+	color: black;
+	font-weight: bold;
+	font-size: 15px;
+	opacity: 0.8;
+	background-color: white;
+	border-radius: 10px;
+	margin: 30px;
+}
+
+.button:hover {
+	border-color: black;
+	background-color: white;
+	box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
+  	transform: translateY(-0.1875em);
+}
+
+footer {
+	color: white;
+	text-align: right;
+	font-size: 14px;
+	margin-top: auto;
+}

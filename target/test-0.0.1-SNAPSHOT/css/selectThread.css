@@ -1,0 +1,207 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP');
+
+html {
+	backdrop-filter: blur(3px);
+	height: 100%;
+	width: 100%;
+	margin: 0;
+}
+body, .wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+body {
+	font-family: 'Noto Serif JP', sans-serif;
+	color: black;
+	margin: 0;
+	background-color: white;
+	width: 100%;
+	height: 100%;
+
+}
+
+header {
+	width: 100%;
+	border-bottom: groove 1px gray;
+	background-color: #dbdbdb200200200;
+	height: 50px;
+	z-index: 999;
+}
+
+header ul {
+	list-style: none;
+	margin:0;
+	display: flex;
+}
+
+header ul li {
+	width: calc(100%/ 3);
+	font-size: 18px;
+	padding-top: 12px;
+	color:rgb(62,58,57);
+}
+a {
+	color: rgb(62,58,57);
+	text-decoration: none;
+}
+
+header a:hover {
+	opacity: 0.5;
+}
+.container{
+	justify-content: space-between;
+	display: flex;
+	margin:0 auto;
+	position: relative;
+}
+main{
+	width:70%;
+	margin:90px 30px 0px;
+	text-align: center;
+
+}
+.threadinfo{
+	margin-right:120px;
+	margin-bottom:70px;
+	padding:0 60px;
+	width:800px;
+	height:200px;
+	border: solid 3px olive;
+	text-align: center;
+	font-size: 15px;
+	border-radius: 12px;
+	line-height: 40px;
+	background-color: #d2cece12;
+}
+.threadinfo dt{
+	font-size: 22px;
+	border-bottom: solid 1px silver;
+}
+.threadinfo dd{
+	line-height: 22px;
+	margin-inline-start:0;
+}
+
+.threadinfo dd.threadcreateuser{
+	padding-top:40px;
+	text-align: right;
+}
+.threadinfo dd.explain{
+	padding-top: 30px;
+}
+
+.allcomment ul{
+	width: 93%;
+	list-style: none;
+	margin-right:140px;
+	border:solid 3px gray;
+	padding-inline-start:0;
+	border-radius: 6px;
+	background-color: #d2cece12;
+}
+.allcomment ul li.userandtime{
+	text-align: left;
+	line-height: 60px;
+}
+.allcomment ul li.comment{
+  word-wrap: normal;
+  line-height: 20px;
+  padding-bottom: 20px;
+  font-size:18px;
+  text-decoration: underline;
+}
+
+
+.commentform{
+	top:40px;
+	position:-webkit-sticky;
+  position: sticky;
+	margin-top:105px;
+	margin-right:60px;
+	padding:0 30px 0px;
+	width:100%;
+	height:550px;
+	border: solid 3px gray;
+	text-align: center;
+	font-size: 15px;
+	border-radius: 12px;
+	line-height: 40px;
+	background-color: #d2cece12;
+}
+.formtitle{
+	font-size: 16px;
+}
+.commentform dl{
+
+}
+.commentform dl dd{
+	margin-inline-start: 0;
+}
+textarea{
+	width:100%;
+	height:250px;
+	resize: none;
+	border: solid 2px silver;
+}
+input{
+	border:solid 2px silver;
+}
+.button {
+	padding: 4px 30px;
+	border: solid 2px silver;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 14px;
+	opacity: 0.8;
+	color: black;
+	background-color: white;
+	border-radius: 10px;
+	margin: 10px 30px;
+	 cursor : pointer;
+}
+
+.button:hover {
+
+	background-color: white;
+	border-color: black;
+}
+
+.solve {
+	width: 280px;
+}
+#pageTop {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+}
+
+#pageTop i {
+	padding-top: 6px
+}
+
+#pageTop a {
+	display: block;
+	z-index: 999;
+	padding: 8px 0 0 8px;
+	border-radius: 30px;
+	width: 35px;
+	height: 35px;
+	background-color: #9FD6D2;
+	color: rgb(62,58,57);
+	font-weight: bold;
+	text-decoration: none;
+	text-align: left;
+}
+
+#pageTop a:hover {
+	text-decoration: none;
+	opacity: 0.7;
+}
+footer {
+	text-align: right;
+	margin-top: auto;
+	font-size: 14px;
+}

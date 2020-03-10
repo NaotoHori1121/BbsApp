@@ -1,0 +1,117 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP');
+html {
+    backdrop-filter: blur(3px);
+	height:100%;
+	width: 100%;
+	margin: 0;
+}
+
+
+body, .wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+body {
+	background-image: url("../image/backimgnewthread.jpg");
+	background-size: cover;
+	font-family: 'Noto Serif JP', sans-serif;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	font-size: 20px;
+}
+.backbutton {
+	padding: 2px 17px;
+	border: solid 3px gray;
+	text-decoration: none;
+	color: black;
+	font-weight: bold;
+	font-size: 12px;
+	opacity: 0.8;
+	background-color: white;
+	border-radius: 10px;
+	margin: 10px 30px;
+}
+
+.backbutton:hover {
+	border-color: black;
+	background-color: white;
+}
+main{
+	width: 600px;
+	height:750px;
+	padding-top: 5px;
+	margin:90px auto;
+	border: solid 1px white;
+	text-align: center;
+	background-color: white;
+	opacity:0.7;
+	border-radius: 12px;
+	color: black;
+
+}
+h1{
+	font-size: 25px;
+	padding-bottom: 25px;
+}
+h2{
+	text-align: center;
+	font-size: 18px;
+	padding-bottom: 15px;
+
+}
+dl{
+	font: black;
+}
+dl dt{
+	text-align: left;
+	padding-left: 90px;
+	float: left;
+	clear: both;
+	font-size: 20px;
+}
+dl dd{
+	padding-bottom: 25px;
+	padding-left: 38%;
+}
+dl dd input,dl dd select{
+	padding: 7px;
+	border-radius: 12px;
+	outline: 0;
+}
+dl dd textarea{
+	width: 190px;
+	height: 70px;
+	outline: 0;
+	border-radius: 12px;
+}
+
+
+.button{
+	padding: 6px 50px;
+	border: solid 3px gray;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 15px;
+	opacity: 0.8;
+	color: black;
+	background-color: white;
+	border-radius: 10px;
+	margin: 10px 30px 50px 30px;
+}
+.button:hover {
+	border-color: black;
+	background-color: white;
+	box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+  	transform: translateY(-0.1875em);
+}
+
+footer {
+	color: white;
+	text-align: right;
+	margin-top: auto;
+	font-size: 14px;
+}

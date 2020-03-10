@@ -1,0 +1,108 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP');
+
+html {
+	backdrop-filter: blur(7px);
+	height: 100%;
+	width: 100%;
+	margin: 0;
+}
+
+body, .wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+body {
+	background-image: url("../image/userloginbackimage.jpg");
+	background-size: cover;
+	font-family: 'Noto Serif JP', sans-serif;
+	color: white;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+}
+
+.backbutton {
+	padding: 2px 17px;
+	border: solid 3px gray;
+	text-decoration: none;
+	color: black;
+	font-weight: bold;
+	font-size: 12px;
+	opacity: 0.8;
+	background-color: white;
+	border-radius: 10px;
+	margin: 10px 30px;
+}
+
+.backbutton:hover {
+	border-color: black;
+	background-color: white;
+}
+.main {
+	width: 450px;
+	margin: 130px auto;
+	padding: 0px;
+	text-align: center;
+	background-color: white;
+	opacity: 0.8;
+	color: black;
+	border-radius: 12px;
+}
+
+.solve {
+	text-align: center;
+	width: 470px;
+	margin-top: 50px;
+	padding-right: 60px;
+}
+
+.userinfo {
+	font-size: 22px;
+	line-height: 2;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: solid 1px;
+	outline: none;
+}
+
+.input {
+	padding-top: 10px;
+	line-height: 4;
+}
+
+.button {
+	padding: 8px 40px;
+	border: solid 3px gray;
+	text-decoration: none;
+	color: black;
+	font-weight: bold;
+	font-size: 15px;
+	opacity: 0.8;
+	background-color: white;
+	border-radius: 10px;
+	margin: 10px 30px;
+}
+
+.button:hover {
+	border-color: black;
+	background-color: white;
+	box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
+  	transform: translateY(-0.1875em);
+}
+
+.image {
+	width: 20px;
+	padding-top: 10px;
+}
+
+footer {
+	color: white;
+	text-align: right;
+	margin-top: auto;
+	font-size: 14px;
+}

@@ -1,0 +1,136 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP');
+
+html {
+    backdrop-filter: blur(3px);
+	height:100%;
+	width: 100%;
+	margin: 0;
+}
+
+
+body, .wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+body {
+	background-image: url("../image/backregist.jpg");
+	background-size: cover;
+	font-family: 'Noto Serif JP', sans-serif;
+	color: white;
+}
+
+.backbutton {
+	padding: 2px 17px;
+	border: solid 3px gray;
+	text-decoration: none;
+	color: black;
+	font-weight: bold;
+	font-size: 12px;
+	opacity: 0.8;
+	background-color: white;
+	border-radius: 10px;
+	margin: 10px 30px;
+}
+
+.backbutton:hover {
+	border-color: black;
+	background-color: white;
+}
+
+main {
+	width: 400px;
+	height: 400px;
+	margin: 120px auto;
+	padding: 20px 20px 40px 20px;
+	text-align: center;
+	background-color: white;
+	opacity:0.8;
+	color: black;
+	border-radius: 12px;
+}
+
+h1{
+	display:inline-block;
+	font-size: 25px;
+	text-align: center;
+	padding-right:35px;
+	margin-right: 10px;
+	border-bottom: dashed 1.5px gray;
+}
+h2{
+	text-align: left;
+	font-size:20px;
+	font-weight: lighter;
+}
+
+.solve {
+	height: 30px;
+
+}
+
+.inputitem{
+	border-bottom: solid 1px gray;
+	font-size: 17px;
+}
+
+dl dt{
+	float: left;
+	padding: 2em;
+}
+dl dd{
+	margin: 0;
+	padding: 1em 0 1em 3em;
+}
+dt{
+	font-size: 15px;
+}
+dd {
+	font-size: 21px;
+}
+.input{
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: solid 1px;
+	outline: none;
+	padding:12px;
+	font-size: 18px;
+}
+
+
+.button {
+	padding: 6px 30px;
+	border: solid 3px gray;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 15px;
+	opacity: 0.8;
+	color: black;
+	background-color: white;
+	border-radius: 10px;
+	margin: 10px 30px;
+	 cursor : pointer;
+}
+
+.button:hover {
+
+	background-color: white;
+	border-color: black;
+	box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
+  	transform: translateY(-0.1875em);
+}
+
+.image {
+	width: 20px;
+	padding-top: 10px;
+}
+footer {
+	color: white;
+	text-align: right;
+	margin-top: auto;
+	font-size: 14px;
+}

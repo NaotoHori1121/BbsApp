@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP');
+
+html {
+	backdrop-filter: blur(3px);
+	height: 100%;
+	width: 100%;
+}
+
+body, .wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+body {
+	background-image: url("../image/indexbackground.jpg");
+	background-size: cover;
+	font-family: 'Noto Serif JP', sans-serif;
+	text-align: center;
+	height: 100%;
+	width: 100%;
+	margin:0;
+}
+
+header{
+	padding-top: 35px;
+}
+
+.main {
+	width: 650px;
+	margin: 20px auto;
+	padding: 30px;
+	border: 1px solid #555;
+	background: rgba(0, 0, 0, 0.6);
+	outline: none;
+	border-radius: 12px;
+}
+
+h2 {
+	color: white;
+	font-size: 22px;
+	text-decoration: underline;
+
+}
+
+.explain {
+	color: silver;
+	line-height: 1.5;
+	font-size: 14px;
+	padding:0px 0px 20px;
+}
+
+.solve {
+	width: 700px;
+	padding-left: 50px;
+}
+
+.explainmessage {
+	font-size: 18px;
+	color: orange;
+	text-decoration: underline wavy silver;
+
+}
+
+a.button {
+	padding: 6px 20px;
+	border: solid 2px gray;
+	text-decoration: none;
+	color: black;
+	font-weight:bold;
+	font-size: 16px;
+	opacity: 0.7;
+	background-color: white;
+	border-radius: 10px;
+	margin:0px 30px;
+	cursor: pointer;
+
+}
+
+a.button:hover {
+	opacity: 0.3;
+	background-color: white;
+	box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
+  	transform: translateY(-0.1875em);
+}
+
+.newregister {
+	padding: 20px 0px 0px;
+	color: silver;
+}
+
+.newregisterlink {
+	color: teal;
+	font-size: 18px;
+	text-decoration: underline solid white;
+}
+.newregisterlink:hover{
+	opacity: 0.3;
+}
+
+
+footer {
+	color: white;
+	text-align: right;
+	margin-top: auto;
+	font-size: 14px;
+}
+.successmessage{
+	color:yellow;
+	text-decoration: underline;
+}
