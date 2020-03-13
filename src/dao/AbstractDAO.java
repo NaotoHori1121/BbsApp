@@ -26,7 +26,7 @@ abstract class AbstractDAO {
 
 	public static Connection getConnection() throws URISyntaxException,SQLException{
 		Connection connection =null;
-		String dbUrl = System.getenv("mysql2://ba25a6997934f2:c2d54b6f@us-cdbr-iron-east-04.cleardb.net/heroku_bcbf6e365878e54?reconnect=true");
+		String dbUrl = System.getenv("mysql2://ba25a6997934f2:c2d54b6f@us-cdbr-iron-east-04.cleardb.net/heroku_bcbf6e365878e54");
 		return DriverManager.getConnection(dbUrl);
 	}
 
