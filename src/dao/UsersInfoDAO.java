@@ -1,5 +1,6 @@
 package dao;
 
+import java.net.URISyntaxException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -81,16 +82,16 @@ public class UsersInfoDAO extends AbstractDAO{
 
 
 	//ユーザーログイン時検索
-	public UserBean searchUser(UserBean user) {
+	public UserBean searchUser(UserBean user) throws URISyntaxException {
 		return searchUser(user,SEARCH_USER);
 	}
 	//管理者ログイン時検索
-	public UserBean searchAdmin(UserBean user) {
+	public UserBean searchAdmin(UserBean user) throws URISyntaxException {
 		return searchUser(user,SEARCH_ADMIN);
 	}
 
 	//ログイン用メソッド(上記２つのメソッドで使用するもの)
-	private UserBean searchUser(UserBean user,String sql) {
+	private UserBean searchUser(UserBean user,String sql) throws URISyntaxException {
 		try(Connection con = getConnection();
 				PreparedStatement ps = con.prepareStatement(sql);){
 

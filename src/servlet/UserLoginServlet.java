@@ -1,6 +1,7 @@
 package servlet;
 
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -30,7 +31,13 @@ public class UserLoginServlet extends HttpServlet {
 		//ログイン処理を行う
 		UserBean user = new UserBean(userName,userPassword);
 		UserLogic bo = new UserLogic();
-		boolean isUser = bo.executeUserLogin(user);
+		boolean isUser = false;
+		try {
+			isUser = bo.executeUserLogin(user);
+		} catch (URISyntaxException e) {
+			// TODO 自動生成された catch ブロック
+			e.printStackTrace();
+		}
 
 		HttpSession session = request.getSession();	//セッションスコープに保存
 

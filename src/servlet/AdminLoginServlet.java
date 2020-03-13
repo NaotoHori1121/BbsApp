@@ -1,6 +1,7 @@
 package servlet;
 
 import java.io.IOException;
+import java.net.URISyntaxException;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -28,7 +29,13 @@ public class AdminLoginServlet extends HttpServlet {
 		//ログイン処理
 		UserBean admin = new UserBean(adminName,adminPassword);
 		UserLogic bo = new UserLogic();
-		boolean isAdmin = bo.executeAdminLogin(admin);
+		boolean isAdmin = false;
+		try {
+			isAdmin = bo.executeAdminLogin(admin);
+		} catch (URISyntaxException e) {
+			// TODO 自動生成された catch ブロック
+			e.printStackTrace();
+		}
 		HttpSession session = request.getSession();
 
 		if(isAdmin) {

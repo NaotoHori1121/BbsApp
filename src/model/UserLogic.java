@@ -1,5 +1,6 @@
 package model;
 
+import java.net.URISyntaxException;
 import java.util.List;
 
 import dao.UsersInfoDAO;
@@ -8,12 +9,12 @@ public class UserLogic {//ログイン、新規登録処理を行う
 
 	UsersInfoDAO dao = new UsersInfoDAO();
 
-	public boolean executeUserLogin(UserBean user) {//ユーザーログイン
+	public boolean executeUserLogin(UserBean user) throws URISyntaxException {//ユーザーログイン
 		user = dao.searchUser(user);
 		return user != null;
 	}
 
-	public boolean executeAdminLogin(UserBean user) {//管理者ログイン
+	public boolean executeAdminLogin(UserBean user) throws URISyntaxException {//管理者ログイン
 		user = dao.searchAdmin(user);
 		return user != null;
 	}
