@@ -1,5 +1,6 @@
 package dao;
 
+import java.net.URISyntaxException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -60,7 +61,7 @@ public class ThreadDAO extends AbstractDAO{
 			return new ThreadBean(searchUserId(userName),thread.getThreadTitle(),
 					thread.getThreadComment(),searchGenreId(genreName));
 
-		}catch(SQLException e) {
+		}catch(SQLException | URISyntaxException e) {
 			e.printStackTrace();
 		}
 		return null;
@@ -77,7 +78,7 @@ public class ThreadDAO extends AbstractDAO{
 				threadList.add(new ThreadBean(rs.getInt("thread_id"),rs.getString("thread_title"),
 						rs.getString("thread_comment"),rs.getString("user_name")));
 			}
-		}catch(SQLException e) {
+		}catch(SQLException | URISyntaxException e) {
 			e.printStackTrace();
 		}
 		return threadList;
@@ -97,7 +98,7 @@ public class ThreadDAO extends AbstractDAO{
 						rs.getString("thread_comment"),rs.getString("user_name"));
 			}
 
-		}catch(SQLException e) {
+		}catch(SQLException | URISyntaxException e) {
 			e.printStackTrace();
 		}
 		return threadTitleAndThreadCommentAndUseName;
@@ -117,7 +118,7 @@ public class ThreadDAO extends AbstractDAO{
 			//DELETE文を実行する
 			deleteCount = ps.executeUpdate();
 
-		}catch(SQLException e) {
+		}catch(SQLException | URISyntaxException e) {
 			e.printStackTrace();
 		}
 		return deleteCount != 0;
@@ -135,7 +136,7 @@ public class ThreadDAO extends AbstractDAO{
 			//DELETE文を実行する
 			ps.executeUpdate();
 
-		}catch(SQLException e) {
+		}catch(SQLException | URISyntaxException e) {
 			e.printStackTrace();
 		}
 	}
@@ -154,7 +155,7 @@ public class ThreadDAO extends AbstractDAO{
 				threads.add(new ThreadBean(rs.getInt("thread_id"),rs.getString("thread_title"),
 						rs.getString("thread_comment"),rs.getString("user_name")));
 			}
-		}catch (SQLException e) {
+		}catch (SQLException | URISyntaxException e) {
 			e.printStackTrace();
 		}
 		return threads;
@@ -173,7 +174,7 @@ public class ThreadDAO extends AbstractDAO{
 						rs.getString("thread_comment"),rs.getString("user_name")));
 			}
 
-		}catch(SQLException e) {
+		}catch(SQLException | URISyntaxException e) {
 			e.printStackTrace();
 		}
 		return threads;
@@ -197,7 +198,11 @@ public class ThreadDAO extends AbstractDAO{
 			System.out.println(id);
 			return id;
 
+		} catch (URISyntaxException e) {
+			// TODO 自動生成された catch ブロック
+			e.printStackTrace();
 		}
+		return 0;
 	}
 	//ユーザーIDを取得するメソッド
 	private int searchUserId(String userName) throws SQLException {
@@ -215,7 +220,11 @@ public class ThreadDAO extends AbstractDAO{
 			rs.close();
 			System.out.println(id);
 			return id;
+		} catch (URISyntaxException e) {
+			// TODO 自動生成された catch ブロック
+			e.printStackTrace();
 		}
+		return 0;
 	}
 
 }
