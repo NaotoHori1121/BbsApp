@@ -1,6 +1,5 @@
 package dao;
 
-import java.net.URISyntaxException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -49,7 +48,7 @@ public class CommentDAO extends AbstractDAO{
 			while(rs.next()) {
 				commentList.add(new CommentBean(rs.getInt("comment_id"),rs.getString("comment"),rs.getInt("thread_id")));
 			}
-		}catch(SQLException | URISyntaxException e) {
+		}catch(SQLException e) {
 			e.printStackTrace();
 		}
 		return commentList;
@@ -67,7 +66,7 @@ public class CommentDAO extends AbstractDAO{
 				commentList.add(new CommentBean(rs.getInt("comment_id"),rs.getString("user_name"),
 						rs.getString("comment"),rs.getTimestamp("comment_time")));	//javax.sql.Timestamp  time=re.getTimestamp("カラム名"orカラム番号);で取り出す
 			}
-		}catch(SQLException | URISyntaxException e) {
+		}catch(SQLException e) {
 			e.printStackTrace();
 		}
 		return commentList;
@@ -84,7 +83,7 @@ public class CommentDAO extends AbstractDAO{
 
 			ps.executeUpdate();
 
-		} catch (SQLException | URISyntaxException e) {
+		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 		return new CommentBean(comment.getThreadId(),comment.getUserId(),comment.getComment());
@@ -101,7 +100,7 @@ public class CommentDAO extends AbstractDAO{
 			//DELETE文を実行する
 			ps.executeUpdate();
 
-		}catch(SQLException | URISyntaxException e) {
+		}catch(SQLException e) {
 			e.printStackTrace();
 		}
 
@@ -119,7 +118,7 @@ public class CommentDAO extends AbstractDAO{
 			//DELETE文を実行する
 			deleteCount = ps.executeUpdate();
 
-		}catch(SQLException | URISyntaxException e) {
+		}catch(SQLException e) {
 			e.printStackTrace();
 		}
 		return deleteCount;
@@ -135,7 +134,7 @@ public class CommentDAO extends AbstractDAO{
 			//DELETE文を実行する
 			ps.executeUpdate();
 
-		}catch(SQLException | URISyntaxException e) {
+		}catch(SQLException e) {
 			e.printStackTrace();
 		}
 	}
@@ -151,7 +150,7 @@ public class CommentDAO extends AbstractDAO{
 			//DELETE文を実行する
 			deleteCount = ps.executeUpdate();
 
-		}catch(SQLException | URISyntaxException e) {
+		}catch(SQLException  e) {
 			e.printStackTrace();
 		}
 		return deleteCount;

@@ -1,6 +1,5 @@
 package dao;
 
-import java.net.URISyntaxException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -24,10 +23,17 @@ abstract class AbstractDAO {
 //	}
 
 
-	public static Connection getConnection() throws URISyntaxException,SQLException{
+	public static Connection getConnection(){
 		Connection connection =null;
-		String dbUrl = System.getenv("mysql2://ba25a6997934f2:c2d54b6f@us-cdbr-iron-east-04.cleardb.net/heroku_bcbf6e365878e54");
-		return DriverManager.getConnection(dbUrl);
+		String dbUrl = null;
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			dbUrl = System.getenv("mysql://bc730364f273f9:b6009e9c@us-cdbr-iron-east-04.cleardb.net/heroku_a40b8b1319cf83b?reconnect=true");
+			connection = DriverManager.getConnection(dbUrl);
+		}catch(ClassNotFoundException|SQLException e) {
+			e.printStackTrace();
+		}
+		return connection;
 	}
 
 }

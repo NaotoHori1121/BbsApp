@@ -45,7 +45,7 @@ public class UsersInfoDAO extends AbstractDAO{
 				userList.add(new UserBean(rs.getInt("user_id"),rs.getString("user_name"),
 						rs.getString("user_password")));
 			}
-		}catch(SQLException | URISyntaxException e) {
+		}catch(SQLException e) {
 			e.printStackTrace();
 		}
 		return userList;
@@ -74,7 +74,7 @@ public class UsersInfoDAO extends AbstractDAO{
 				return new UserBean(user.getName(),user.getPassword());
 			}
 
-		}catch(SQLException | URISyntaxException e) {
+		}catch(SQLException e) {
 			e.printStackTrace();
 		}
 		return null;
@@ -130,7 +130,7 @@ public class UsersInfoDAO extends AbstractDAO{
 				id = rs.getInt("user_id");
 			}
 
-		}catch(SQLException | URISyntaxException e) {
+		}catch(SQLException e) {
 			e.printStackTrace();
 		}
 		return id;
@@ -149,7 +149,7 @@ public class UsersInfoDAO extends AbstractDAO{
 			//DELETE文を実行する
 			return ps.executeUpdate() > 0;
 
-		}catch(SQLException | URISyntaxException e) {
+		}catch(SQLException e) {
 			e.printStackTrace();
 		}
 		return false;
