@@ -1,5 +1,7 @@
 package dao;
 
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -28,9 +30,14 @@ abstract class AbstractDAO {
 		String dbUrl = null;
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			dbUrl = System.getenv("mysql://bc730364f273f9:b6009e9c@us-cdbr-iron-east-04.cleardb.net/heroku_a40b8b1319cf83b?reconnect=true");
-			connection = DriverManager.getConnection(dbUrl);
-		}catch(ClassNotFoundException|SQLException e) {
+			URI dbUri = new URI(System.getenv("mysql://bc730364f273f9:b6009e9c@us-cdbr-iron-east-04.cleardb.net/heroku_a40b8b1319cf83b?reconnect=true"));
+			String username = dbUri.getUserInfo().split(":")[0];
+	        String password = dbUri.getUserInfo().split(":")[1];
+	        // JDBC用のURLを生成。
+	        dbUrl = "jdbc:mysql://" + dbUri.getHost() + dbUri.getPath();
+	        connection =  DriverManager.getConnection(dbUrl, username, password);
+
+		}catch(ClassNotFoundException|SQLException | URISyntaxException e) {
 			e.printStackTrace();
 		}
 		return connection;
