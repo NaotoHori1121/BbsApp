@@ -27,7 +27,7 @@ abstract class AbstractDAO {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			con = DriverManager.getConnection("jdbc:mysql://us-cdbr-iron-east-04.cleardb.net/" +
-					"heroku_a40b8b1319cf83b" + "?user=" + "bc730364f273f9" + "&password=" + "b6009e9c" + "&serverTimezone=UTC");
+					"heroku_a40b8b1319cf83b" + "?user=" + "bc730364f273f9" + "&password=" + "b6009e9c" + "&serverTimezone=UTC&characterEncoding=utf8");
 		}catch(ClassNotFoundException|SQLException e) {
 			e.printStackTrace();
 		}
