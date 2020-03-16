@@ -6,11 +6,12 @@ import java.sql.SQLException;
 
 abstract class AbstractDAO {
 
-	private String user = System.getenv("DB_USERNAME");
-	private String password = System.getenv("DB_PASSWORD");
-	private String host = System.getenv("DB_HOST");
-	private String databasename = System.getenv("DB_DATABASE");
-//ローカル
+	private String databaseName = "bbs";
+	private String user = "root";
+	private String password = "password";
+	private String username = System.getenv("DB_USERNAME");
+	private String pass = System.getenv("DB_PASSWORD");
+
 //	protected Connection getConnection() {
 //		Connection con = null;
 //		try {
@@ -24,11 +25,12 @@ abstract class AbstractDAO {
 //	}
 
 	protected Connection getConnection() {
+		System.out.println(username + pass);
 		Connection con = null;
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			con = DriverManager.getConnection("jdbc:mysql://" + host + "/" +
-					databasename + "?user=" + user + "&password=" + password + "&serverTimezone=UTC&characterEncoding=utf8");
+			con = DriverManager.getConnection("jdbc:mysql://us-cdbr-iron-east-04.cleardb.net/" +
+					"heroku_a40b8b1319cf83b" + "?user=" + username + "&password=" + pass + "&serverTimezone=UTC&characterEncoding=utf8");
 		}catch(ClassNotFoundException|SQLException e) {
 			e.printStackTrace();
 		}
