@@ -9,8 +9,8 @@ abstract class AbstractDAO {
 	private String databaseName = "bbs";
 	private String user = "root";
 	private String password = "password";
-	private String username = System.getenv("DB_USERNAME");
-	private String pass = System.getenv("DB_PASSWORD");
+	private String username = System.getenv("CLEAR_DB_USERNAME");
+	private String pass = System.getenv("CLEAR_DB_PASSWORD");
 
 //	protected Connection getConnection() {
 //		Connection con = null;
