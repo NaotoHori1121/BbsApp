@@ -352,7 +352,7 @@ footer {
 	.container {
 		width: 100%;
 		display: flex;
-		flex-direction: column-reverse;
+		flex-direction: column;
 	}
 
 	main {
@@ -368,7 +368,7 @@ footer {
 		padding: 5px;
 	}
 	.commentform {
-		margin-top:100px;
+		margin-top:150px;
 		padding:5px;
 		width: 90%;
 		height: 195px;

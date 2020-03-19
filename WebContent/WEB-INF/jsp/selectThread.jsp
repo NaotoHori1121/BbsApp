@@ -49,6 +49,25 @@
 			</div>
 		</header>
 		<div class="container">
+			<form action="NewCommentServlet" method="post">
+				<input type="hidden" name="threadId" value="${threadId}">
+				<!-- コメント追加で使うため -->
+
+				<div class="commentform">
+					<dl>
+						<dt class="formtitle">コメント投稿</dt>
+						<dt class="postuser">投稿者</dt>
+						<dd class="postuser">
+							<input type="text" name="name" value="${name }" readonly>
+						</dd>
+						<dt>投稿内容</dt>
+						<dd>
+							<textarea name="comment" placeholder="投稿内容を入力してください" required></textarea>
+						</dd>
+					</dl>
+					<input type="submit" value="投稿する" class="button">
+				</div>
+			</form>
 			<main>
 				<p>
 					<font color="red"> <!--コメントが追加できなければ表示 --> <c:out
@@ -78,25 +97,6 @@
 					<c:remove var="comment" />
 				</div>
 			</main>
-			<form action="NewCommentServlet" method="post">
-				<input type="hidden" name="threadId" value="${threadId}">
-				<!-- コメント追加で使うため -->
-
-				<div class="commentform">
-					<dl>
-						<dt class="formtitle">コメント投稿</dt>
-						<dt class="postuser">投稿者</dt>
-						<dd class="postuser">
-							<input type="text" name="name" value="${name }" readonly>
-						</dd>
-						<dt>投稿内容</dt>
-						<dd>
-							<textarea name="comment" placeholder="投稿内容を入力してください" required></textarea>
-						</dd>
-					</dl>
-					<input type="submit" value="投稿する" class="button">
-				</div>
-			</form>
 
 		</div>
 		<p id="pageTop">
