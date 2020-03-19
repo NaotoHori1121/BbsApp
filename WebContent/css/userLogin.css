@@ -17,7 +17,7 @@ body, .wrapper {
 
 body {
 	background-image: url("../image/userloginbackimage.jpg");
-	background-size: cover;
+	background-attachment:fixed;
 	font-family: 'Noto Serif JP', sans-serif;
 	color: white;
 	height: 100%;

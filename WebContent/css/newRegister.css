@@ -18,7 +18,7 @@ body, .wrapper {
 
 body {
 	background-image: url("../image/backregist.jpg");
-	background-size: cover;
+	background-attachment:fixed;
 	font-family: 'Noto Serif JP', sans-serif;
 	color: white;
 }

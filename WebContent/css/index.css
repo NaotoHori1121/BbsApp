@@ -16,8 +16,8 @@ body, .wrapper {
 
 body {
 	background-image: url("../image/indexbackground.jpg");
-	background-size: cover;
-	font-family: 'Noto Serif JP', sans-serif;
+	background-attachment:fixed;
+		font-family: 'Noto Serif JP', sans-serif;
 	text-align: center;
 	height: 100vh;
 	width: 100%;
