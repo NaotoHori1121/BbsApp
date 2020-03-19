@@ -23,18 +23,20 @@ public class SelectDeleteUserMenuServlet extends HttpServlet {
 			throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 
-		UserLogic bo = new UserLogic();//全ユーザー取得
-		List<UserBean>userList = bo.executeFindAllUser();
-
 		HttpSession session = request.getSession();
+		if(session.getAttribute("adminname")!=null) {
+			UserLogic bo = new UserLogic();//全ユーザー取得
+			List<UserBean>userList = bo.executeFindAllUser();
 
-
-		if(!(userList.isEmpty())) {
-			request.setAttribute("allUser", userList);
-			request.getRequestDispatcher("WEB-INF/jsp/userManagement.jsp").forward(request, response);
+			if(!(userList.isEmpty())) {
+				request.setAttribute("allUser", userList);
+				request.getRequestDispatcher("WEB-INF/jsp/userManagement.jsp").forward(request, response);
+			}else {
+				session.setAttribute("message", "ユーザー一覧を取得できませんでした");
+				response.sendRedirect("WEB-INF/jsp/adminMainMenu.jsp");
+			}
 		}else {
-			session.setAttribute("message", "ユーザー一覧を取得できませんでした");
-			response.sendRedirect("WEB-INF/jsp/adminMainMenu.jsp");
+			response.sendRedirect("index.jsp");
 		}
 
 	}

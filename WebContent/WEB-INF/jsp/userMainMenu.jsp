@@ -41,7 +41,7 @@
     <div class="luxbar-menu luxbar-menu-right luxbar-menu-light">
         <ul class="luxbar-navigation">
             <li class="luxbar-header">
-                <a href="index.jsp" class="luxbar-brand"><img class="solve"
+                <a href="LogoutServlet" class="luxbar-brand"><img class="solve"
 						src="./image/logologologo.png"></a><span class="username">ようこそ<c:out value="${name}" />さん</span>
                 <label class="luxbar-hamburger luxbar-hamburger-doublespin"
                 id="luxbar-hamburger" for="luxbar-checkbox"> <span></span> </label>

@@ -26,23 +26,27 @@ public class SelectThreadServlet extends HttpServlet {
 
 		response.setCharacterEncoding("UTF-8");
 
-		//threadIdを使ってスレッドタイトルと説明文と作成者を取得する
-		int threadId = Integer.parseInt(request.getParameter("threadId"));
-		ThreadLogic bo1 = new ThreadLogic();
-		ThreadBean threadTitleCommentUserName = bo1.executeFindTitleAndThreadCommentAndUserName(threadId);
-
-		//全コメントを取得しパラメータに保存
-		CommentLogic bo2 = new CommentLogic();
-		List<CommentBean>commentList = bo2.executeFindAllComment(threadId);
-
 		HttpSession session = request.getSession();
-		session.setAttribute("allComments", commentList);
-		session.setAttribute("title", threadTitleCommentUserName.getThreadTitle());
-		session.setAttribute("threadComment", threadTitleCommentUserName.getThreadComment());
-		session.setAttribute("createThreadUserName", threadTitleCommentUserName.getUserName());
-		session.setAttribute("threadId",threadId);
+		if(session.getAttribute("name")!=null) {
+			//threadIdを使ってスレッドタイトルと説明文と作成者を取得する
+			int threadId = Integer.parseInt(request.getParameter("threadId"));
+			ThreadLogic bo1 = new ThreadLogic();
+			ThreadBean threadTitleCommentUserName = bo1.executeFindTitleAndThreadCommentAndUserName(threadId);
 
-		request.getRequestDispatcher("WEB-INF/jsp/selectThread.jsp").forward(request, response);
+			//全コメントを取得しパラメータに保存
+			CommentLogic bo2 = new CommentLogic();
+			List<CommentBean>commentList = bo2.executeFindAllComment(threadId);
+
+			session.setAttribute("allComments", commentList);
+			session.setAttribute("title", threadTitleCommentUserName.getThreadTitle());
+			session.setAttribute("threadComment", threadTitleCommentUserName.getThreadComment());
+			session.setAttribute("createThreadUserName", threadTitleCommentUserName.getUserName());
+			session.setAttribute("threadId",threadId);
+
+			request.getRequestDispatcher("WEB-INF/jsp/selectThread.jsp").forward(request, response);
+		}else {
+			response.sendRedirect("index.jsp");
+		}
 
 	}
 

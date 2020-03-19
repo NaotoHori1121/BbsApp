@@ -7,6 +7,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 
 @WebServlet("/SelectNewThreadServlet")
@@ -16,8 +17,12 @@ public class SelectNewThreadServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
-		request.getRequestDispatcher("WEB-INF/jsp/newThread.jsp").forward(request, response);
+		HttpSession session = request.getSession();
+		if(session.getAttribute("name")!=null) {
+			request.getRequestDispatcher("WEB-INF/jsp/newThread.jsp").forward(request, response);
+		}else {
+			response.sendRedirect("index.jsp");
+		}
 	}
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {

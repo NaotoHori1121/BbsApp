@@ -47,6 +47,7 @@ public class NewThreadServlet extends HttpServlet {
 	}
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		response.sendRedirect("WEB-INF/jsp/userMainMenu.jsp");
 	}
 
 }

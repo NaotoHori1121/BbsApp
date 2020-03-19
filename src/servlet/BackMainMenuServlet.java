@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import model.ThreadBean;
 import model.ThreadLogic;
@@ -20,14 +21,17 @@ public class BackMainMenuServlet extends HttpServlet {
 			throws ServletException, IOException {
 		response.setContentType("UTF-8");
 
-		//スレッドを全件取得しリクエストスコープに保存
-		ThreadLogic bo = new ThreadLogic();
-		List<ThreadBean>threadList = bo.executeFindAllThread();
-		request.setAttribute("threadList", threadList);
-
-		request.setAttribute("genreimg", String.valueOf(0));//プログラミング言語毎の画像表示のため
-
-		request.getRequestDispatcher("WEB-INF/jsp/userMainMenu.jsp").forward(request, response);
+		HttpSession session = request.getSession();
+		if(session.getAttribute("name")!=null) {
+			//スレッドを全件取得しリクエストスコープに保存
+			ThreadLogic bo = new ThreadLogic();
+			List<ThreadBean>threadList = bo.executeFindAllThread();
+			request.setAttribute("threadList", threadList);
+			request.setAttribute("genreimg", String.valueOf(0));//プログラミング言語毎の画像表示のため
+			request.getRequestDispatcher("WEB-INF/jsp/userMainMenu.jsp").forward(request, response);
+		}else {
+			response.sendRedirect("index.jsp");
+		}
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)

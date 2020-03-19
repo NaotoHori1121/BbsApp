@@ -353,12 +353,9 @@ footer {
 	.container {
 		width: 100%;
 		display: flex;
-		overflow: visible;
 		flex-direction: column-reverse;
 	}
-	.wrapper {
-		overflow: visible;
-	}
+
 	main {
 		width: 100%;
 		height: auto;

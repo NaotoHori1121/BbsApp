@@ -21,18 +21,20 @@ public class SelectDeleteCommentMenuServlet extends HttpServlet {
 			throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 
-		CommentLogic bo = new CommentLogic();//全コメント取得
-		List<CommentBean>allCommentList = bo.executeFindAllComment();
-
 		HttpSession session = request.getSession();
+		if(session.getAttribute("adminname")!=null) {
+			CommentLogic bo = new CommentLogic();//全コメント取得
+			List<CommentBean>allCommentList = bo.executeFindAllComment();
 
-
-		if(!(allCommentList.isEmpty())) {
-			request.setAttribute("allComment", allCommentList);
-		request.getRequestDispatcher("WEB-INF/jsp/commentManagement.jsp").forward(request, response);
+			if(!(allCommentList.isEmpty())) {
+				request.setAttribute("allComment", allCommentList);
+				request.getRequestDispatcher("WEB-INF/jsp/commentManagement.jsp").forward(request, response);
+			}else {
+				session.setAttribute("message", "コメント一覧を取得できませんでした");
+				response.sendRedirect("WEB-INF/jsp/adminMainMenu.jsp");
+			}
 		}else {
-			session.setAttribute("message", "コメント一覧を取得できませんでした");
-			response.sendRedirect("WEB-INF/jsp/adminMainMenu.jsp");
+			response.sendRedirect("index.jsp");
 		}
 
 	}

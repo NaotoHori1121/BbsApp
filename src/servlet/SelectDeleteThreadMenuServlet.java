@@ -23,18 +23,20 @@ public class SelectDeleteThreadMenuServlet extends HttpServlet {
 			throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 
-		ThreadLogic bo = new ThreadLogic();//全ユーザー取得
-		List<ThreadBean>threadList = bo.executeFindAllThread();
-
 		HttpSession session = request.getSession();
+		if(session.getAttribute("adminname")!=null) {
+			ThreadLogic bo = new ThreadLogic();//全ユーザー取得
+			List<ThreadBean>threadList = bo.executeFindAllThread();
 
-
-		if(!(threadList.isEmpty())) {
-			request.setAttribute("allThread", threadList);
-			request.getRequestDispatcher("WEB-INF/jsp/threadManagement.jsp").forward(request, response);
+			if(!(threadList.isEmpty())) {
+				request.setAttribute("allThread", threadList);
+				request.getRequestDispatcher("WEB-INF/jsp/threadManagement.jsp").forward(request, response);
+			}else {
+				session.setAttribute("message", "スレッド一覧を取得できませんでした");
+				response.sendRedirect("WEB-INF/jsp/threadManagement.jsp");
+			}
 		}else {
-			session.setAttribute("message", "スレッド一覧を取得できませんでした");
-			response.sendRedirect("WEB-INF/jsp/threadManagement.jsp");
+			response.sendRedirect("index.jsp");
 		}
 
 	}
