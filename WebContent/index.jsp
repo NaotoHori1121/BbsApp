@@ -20,9 +20,9 @@
 
 		<div class="main">
 
+			<!-- 新規登録成功 -->
 			<p class="successmessage">
 				<c:out value="${successmessage}" />
-				<!-- 新規登録成功 -->
 			</p>
 			<c:remove var="successmessage" />
 			<!-- セッションスコープからインスタンスを削除 -->

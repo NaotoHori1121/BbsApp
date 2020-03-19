@@ -16,8 +16,7 @@ body, .wrapper {
 
 body {
 	background-image: url("../image/indexbackground.jpg");
-	background-size:cover;
-		font-family: 'Noto Serif JP', sans-serif;
+	font-family: 'Noto Serif JP', sans-serif;
 	text-align: center;
 	height: 100%;
 	width: 100%;
@@ -186,4 +185,3 @@ footer {
 		line-height: 1.0;
 	}
 }
-
