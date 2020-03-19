@@ -366,14 +366,14 @@ footer {
 		padding: 10px 0px;
 		display: column;
 	}
-	.commentform, .threadinfo, .allcomment {
+	.threadinfo, .allcomment {
 		width: 90%;
 		margin: 0 auto;
 		padding: 5px;
 	}
 	.commentform {
-	margin-top:80px;
-		top: 0px;
+		margin-top:100px;
+		padding:5px;
 		position: -webkit-sticky;
 		position: sticky;
 		width: 90%;
