@@ -19,7 +19,8 @@ body, .wrapper {
 
 body {
 	background-image: url("../image/adminbackground.jpg");
-	background-attachment:fixed;
+	background-size:cover;
+	position:fixed;
 	font-family: 'Noto Serif JP', sans-serif;
 	color: white;
 	width: 100%;
