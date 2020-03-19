@@ -12,7 +12,7 @@ abstract class AbstractDAO {
 	private String username = System.getenv("CLEAR_DB_USERNAME");
 	private String pass = System.getenv("CLEAR_DB_PASSWORD");
 
-	//ローカルでの動作確認
+	//ローカルでの動作確認.
 //	protected Connection getConnection() {
 //		Connection con = null;
 //		try {
