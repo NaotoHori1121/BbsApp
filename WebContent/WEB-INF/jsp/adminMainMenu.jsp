@@ -45,11 +45,7 @@
 				</form></li>
 
 		</ul>
-		<!--
-	  <form action="" method="get">
-		<input type="submit" name="changepassword" value="管理者パスワード変更">
-	</form>
-	-->
+
 	</main>
 	<footer>
 		<jsp:include page="footer.jsp" />
