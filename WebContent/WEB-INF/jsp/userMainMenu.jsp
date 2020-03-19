@@ -5,7 +5,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta name="viewport" charset="UTF-8"
+	content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<link rel="stylesheet"
+	href="https://cdn.rawgit.com/balzss/luxbar/ae5835e2/build/luxbar.min.css">
 <link rel="stylesheet" href="css/userMainMenu.css">
 <title>ユーザーメインメニュー</title>
 <!-- jQuery -->
@@ -32,21 +35,22 @@
 
 <body>
 	<div class="wrapper">
-		<header>
-			<ul>
-				<li><a href="index.jsp"><img class="solve"
-						src="./image/logologo.png"></a></li>
-				<li>ようこそ<c:out value="${name}" />さん
-				</li>
 
-				<li><form action="InputSearchThreadTitleServlet" method="post">
-				<input type="search" placeholder="スレッドタイトルの検索"  name="inputword">
-				<input type="submit" value="検索する"></form></li>
-
-				<li><a href="SelectNewThreadServlet">新しい掲示板の作成</a></li>
-				<li><a href="LogoutServlet">ログアウト</a></li>
-			</ul>
-		</header>
+		<header id="luxbar" class="luxbar-fixed">
+    <input type="checkbox" class="luxbar-checkbox" id="luxbar-checkbox"/>
+    <div class="luxbar-menu luxbar-menu-right luxbar-menu-light">
+        <ul class="luxbar-navigation">
+            <li class="luxbar-header">
+                <a href="index.jsp" class="luxbar-brand"><img class="solve"
+						src="./image/logologologo.png"></a><span class="username">ようこそ<c:out value="${name}" />さん</span>
+                <label class="luxbar-hamburger luxbar-hamburger-doublespin"
+                id="luxbar-hamburger" for="luxbar-checkbox"> <span></span> </label>
+            </li>
+            <li class="luxbar-item"><a href="SelectNewThreadServlet">新しい掲示板の作成</a></li>
+            <li class="luxbar-item"><a href="LogoutServlet">ログアウト</a></li>
+        </ul>
+    </div>
+</header>
 		<div class="container">
 			<div class="languagelist">
 				<ul>
@@ -112,10 +116,12 @@
 					</c:if>
 
 					<form action="InputSearchThreadTitleServlet" method="post">
+					<div class="search">
 					<p>
 						<input type="search" placeholder="スレッドタイトルの検索" name="inputword">
 					</p>
 					<p><input type="submit" value="検索する"></p>
+					</div>
 					</form>
 					<p>
 						<a href="SelectNewThreadServlet">新しい掲示板の作成</a>
@@ -125,7 +131,7 @@
 
 		</div>
 		<p id="pageTop">
-			<a href="#"><i class="fa fa-chevron-up"></i>(↑)</a>
+			<a href="#"><i class="fa fa-chevron-up"></i>UP</a>
 		</p>
 		<footer>
 			<jsp:include page="footer.jsp" />

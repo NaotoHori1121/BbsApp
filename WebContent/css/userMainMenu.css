@@ -10,12 +10,8 @@ html {
 }
 
 a {
-	color: rgb(62,58,57);
+	color: rgb(62, 58, 57);
 	text-decoration: none;
-}
-
-header a:hover {
-	opacity: 0.5;
 }
 
 body, .wrapper {
@@ -33,32 +29,8 @@ body {
 	height: 100%;
 }
 
-header {
-	position: fixed;
-	width: 100%;
-	border-bottom: solid 1px gray;
-	background-color: white;
-	height: 50px;
-	z-index: 2;
-	color:rgb(62,58,57);
-}
-
-header ul {
-	list-style: none;
-	margin: 0;
-	text-align: center;
-	display: flex;
-	padding: 0;
-}
-
-header ul li {
-	width: calc(100%/ 4);
-	font-size: 18px;
-	padding-top: 12px;
-}
-
 .solve {
-	width: 280px;
+	width: 160px;
 }
 
 .languagelist {
@@ -94,8 +66,8 @@ header ul li {
 
 .languagelist ul li a:hover {
 	box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
-  	transform: translateY(-0.1875em);
-  	opacity: 0.7;
+	transform: translateY(-0.1875em);
+	opacity: 0.7;
 }
 
 .languagelist ul li a.all {
@@ -170,7 +142,6 @@ header ul li {
 	transition: all 0.1s ease 0s;
 }
 
-
 .threads ul li.first {
 	font-size: 18px;
 	margin-bottom: 15px;
@@ -203,13 +174,14 @@ header ul li {
 .threads ul:hover {
 	opacity: 0.5;
 	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.25);
-  	transform: translateY(-0.1875em);
+	transform: translateY(-0.1875em);
 }
 
-.side a{
+.side a {
 	font-size: 18px;
 }
-.side a:hover{
+
+.side a:hover {
 	opacity: 0.7;
 }
 
@@ -231,7 +203,7 @@ header ul li {
 	width: 35px;
 	height: 35px;
 	background-color: #9FD6D2;
-	color: rgb(62,58,57);
+	color: rgb(62, 58, 57);
 	font-weight: bold;
 	text-decoration: none;
 	text-align: left;
@@ -251,4 +223,141 @@ footer {
 	text-align: right;
 	margin-top: auto;
 	font-size: 14px;
+}
+
+/*タブレット用の設定*/
+@media screen and (max-width:1024px) {
+body html .wrapper {
+		width: 100%;
+		height: auto;
+	}
+	header {
+		overflow: hidden;
+	}
+	.main {
+		width: 100%;
+		height: auto;
+		margin: auto;
+		padding: 10px 0px;
+		flex-direction: column-reverse;
+	}
+	.threads, .side {
+		width: 100%;
+		margin: 0 auto;
+	}
+	img.img {
+		width: 160px;
+		height: 90px;
+		margin-bottom: 2px;
+	}
+	.solve {
+		width: 100px;
+	}
+	.languagelist ul {
+		overflow-x: auto;
+		white-space: nowrap;
+	}
+	.languagelist ul li {
+		display: inline-block;
+		width: 22%;
+	}
+	.username {
+		font-size: 12px;
+	}
+	.threads ul {
+		margin: 0 auto;
+	}
+	.threads{
+		width: 90%;
+		margin:0 auto;
+	}
+	.side{
+	width:100%;
+	margin:0 auto;
+	}
+	.side a{
+	border:solid 3px silver;
+	border-radius:8px;
+	padding:3px;
+	}
+	.side p{
+	margin:30px auto;
+	}
+	.search{
+	display: flex;
+	justify-content: center;
+	margin-top: 15px;
+	}
+	.search p{
+	margin:10px 10px;
+	}
+}
+
+/*スマホ用の設定*/
+@media screen and (max-width:480px) {
+	body html .wrapper {
+		width: 100%;
+		height: auto;
+	}
+
+	.wrapper {
+		overflow: visible;
+	}
+	.main {
+		width: 100%;
+		height: auto;
+		margin: auto;
+		padding: 10px 0px;
+		flex-direction: column-reverse;
+	}
+	.threads, .side {
+		width: 100%;
+		margin: 0 auto;
+	}
+	img.img {
+		width: 160px;
+		height: 90px;
+		margin-bottom: 2px;
+	}
+	.solve {
+		width: 100px;
+	}
+	.languagelist ul {
+		overflow-x: auto;
+		white-space: nowrap;
+	}
+	.languagelist ul li {
+		display: inline-block;
+		width: 22%;
+	}
+	.username {
+		font-size: 12px;
+	}
+	.threads ul {
+		margin: 0 auto;
+	}
+	.threads{
+		width: 90%;
+		margin:0 auto;
+	}
+	.side{
+	width:100%;
+	margin:0 auto;
+	}
+	.side a{
+	border:solid 3px silver;
+	border-radius:8px;
+	padding:3px;
+	}
+	.side p{
+	margin:30px auto;
+	}
+	.search{
+	display: flex;
+	justify-content: center;
+	margin-top: 15px;
+	}
+	.search p{
+	margin:10px 10px;
+	}
 }

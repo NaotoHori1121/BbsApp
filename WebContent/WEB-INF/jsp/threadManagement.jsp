@@ -4,7 +4,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta name="viewport" charset="UTF-8"
+	content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="stylesheet" href="css/threadManagement.css">
 <title>スレッド管理</title>
 </head>
@@ -37,7 +38,7 @@
 			</p>
 
 			<p>
-				スレッドタイトル:<input type="text" name="title" required>
+				タイトル:<input type="text" name="title" required>
 			</p>
 
 			<p>

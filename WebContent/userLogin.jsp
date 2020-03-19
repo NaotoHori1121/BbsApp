@@ -4,7 +4,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta name="viewport" charset="UTF-8"
+	content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="stylesheet" href="css/userLogin.css">
 <title>ユーザーログイン</title>
 
@@ -15,7 +16,7 @@
 			<input type="submit" value="トップページへ戻る" class="backbutton">
 		</form>
 		<div class="main">
-			<img class="solve" src="image/logologo.png">
+			<img class="solve" src="image/logologologologo.png">
 			<p>
 				<c:set var="errormessage" value="${message}" />
 				<font color="red"> <!-- 既に登録されているユーザー名を入力でメッセージ表示 --> <c:out

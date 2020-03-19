@@ -5,7 +5,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta name="viewport" charset="UTF-8"
+	content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="stylesheet" href="css/adminLogin.css">
 <title>管理者ログイン</title>
 </head>
@@ -17,7 +18,7 @@
 			</form>
 		</header>
 		<div class="main">
-			<img class="solve" src="image/logologo.png">
+			<img class="solve" src="image/logologologologo.png">
 			<p>
 				<c:set var="errormessage" value="${message}" />
 				<font color="red"> <!-- 既に登録されているユーザー名を入力でメッセージ表示 --> <c:out

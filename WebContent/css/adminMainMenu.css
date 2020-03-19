@@ -87,3 +87,58 @@ footer {
 	font-size: 14px;
 	margin-top: auto;
 }
+
+/*タブレット用の設定*/
+@media screen and (max-width:1024px) {
+	body html .wrapper{
+		width: 100%;
+		height: auto;
+	}
+	main {
+		width: 75%;
+		height: auto;
+		margin: auto;
+		padding: 50px 25px;
+	}
+
+	main ul {
+	list-style: none;
+	display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-inline-start:0;
+}
+
+
+}
+
+
+/*スマホ用の設定*/
+@media screen and (max-width:480px) {
+	body html .wrapper{
+		width: 100%;
+		height: auto;
+	}
+	main {
+		width: 70%;
+		height: 85%;
+		margin: auto;
+		padding: 10px 25px;
+	}
+
+	main ul {
+	list-style: none;
+	display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-inline-start:0;
+}
+main ul li{
+	margin-top:15px;
+}
+.button{
+	padding:15px 20px;
+}
+
+
+}

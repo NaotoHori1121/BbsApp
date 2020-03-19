@@ -115,3 +115,76 @@ footer {
 	margin-top: auto;
 	font-size: 14px;
 }
+
+/*タブレット用の設定*/
+@media screen and (max-width:1024px) {
+	body html .wrapper{
+		width: 100%;
+		height: auto;
+	}
+	main {
+		width: 75%;
+		height: auto;
+		margin: auto;
+		padding: 50px 25px;
+	}
+	table {
+	margin:10px auto;
+	}
+	table tr th{
+	padding:15px 0px;
+	}
+	.solve {
+		width: 40%;
+		margin: 20px auto 0;
+		padding-right: 0px;
+	}
+	.button{
+	margin:0 auto -30px;
+	}
+	.deleteUser p{
+	margin:45px 0px;
+	}
+
+}
+
+
+/*スマホ用の設定*/
+@media screen and (max-width:480px) {
+	body html .wrapper{
+		width: 100%;
+		height: auto;
+	}
+	main {
+		width: 80%;
+		height: auto;
+		margin: auto;
+		padding: 10px 25px;
+	}
+
+	main h1,main h2{
+	margin:0 auto;
+	font-size:20px;
+	}
+
+
+	.button{
+	margin:20px auto;
+	}
+
+	.userinfo{
+	width:70%;
+	margin:0 auto;
+	}
+
+	dl{
+	margin:0 auto;
+	}
+	dl dt{
+	padding-left:0px;
+	padding-bottom: 10px;
+	}
+	dl dd{
+	padding-left: 0px;
+	}
+}

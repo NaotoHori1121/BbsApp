@@ -4,7 +4,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta name="viewport" charset="UTF-8"
+	content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<link rel="stylesheet"
+	href="https://cdn.rawgit.com/balzss/luxbar/ae5835e2/build/luxbar.min.css">
 <link rel="stylesheet" href="css/selectThread.css">
 <title><c:out value="${title}"></c:out></title>
 <!-- jQuery -->
@@ -30,14 +33,20 @@
 </head>
 <body>
 	<div class="wrapper">
-		<header>
-			<ul>
-				<li><a href="index.jsp"><img class="solve"
-						src="./image/logologo.png"></a></li>
-				<li>ユーザー名:<c:out value="${name}" /></li>
-				<li><a href="BackMainMenuServlet">メニュー画面へ</a></li>
-				<li><a href="LogoutServlet">ログアウト</a></li>
-			</ul>
+		<header id="luxbar" class="luxbar-fixed">
+			<input type="checkbox" class="luxbar-checkbox" id="luxbar-checkbox" />
+			<div class="luxbar-menu luxbar-menu-right luxbar-menu-light">
+				<ul class="luxbar-navigation">
+					<li class="luxbar-header"><a href="index.jsp" class="luxbar-brand"><img
+							class="solve" src="./image/logologologo.png"></a> <span>ユーザー名:<c:out value="${name}" /></span>
+							<label
+						class="luxbar-hamburger luxbar-hamburger-doublespin"
+						id="luxbar-hamburger" for="luxbar-checkbox"> <span></span>
+					</label></li>
+					<li class="luxbar-item"><a href="BackMainMenuServlet">メニュー画面へ</a></li>
+					<li class="luxbar-item"><a href="LogoutServlet">ログアウト</a></li>
+				</ul>
+			</div>
 		</header>
 		<div class="container">
 			<main>
@@ -51,12 +60,11 @@
 
 				<div class="threadinfo">
 					<dl>
-						<dt>${title}</dt>
-						<dd class="explain">スレッド説明....${threadComment}</dd>
+						<dt><span style="font-size:12px;">タイトル:</span>${title}</dt>
+						<dd class="explain"><span style="font-size:10px;">スレッド説明....</span>${threadComment}</dd>
 						<dd class="threadcreateuser">作成者:${createThreadUserName}</dd>
 					</dl>
 				</div>
-
 
 				<div class="allcomment">
 
@@ -64,7 +72,7 @@
 						<ul>
 							<li class="userandtime">ユーザー名:${comment.getUserName()}
 								投稿時間:${comment.getDateTime()}</li>
-							<li class="comment">${comment.getUserName()}「${comment.getComment()}」</li>
+							<li class="comment">${comment.getUserName()}<br>「${comment.getComment()}」</li>
 						</ul>
 					</c:forEach>
 					<c:remove var="comment" />
@@ -77,8 +85,8 @@
 				<div class="commentform">
 					<dl>
 						<dt class="formtitle">コメント投稿</dt>
-						<dt>投稿者</dt>
-						<dd>
+						<dt class="postuser">投稿者</dt>
+						<dd class="postuser">
 							<input type="text" name="name" value="${name }" readonly>
 						</dd>
 						<dt>投稿内容</dt>
@@ -92,7 +100,7 @@
 
 		</div>
 		<p id="pageTop">
-			<a href="#"><i class="fa fa-chevron-up"></i>(↑)</a>
+			<a href="#"><i class="fa fa-chevron-up"></i>UP</a>
 		</p>
 		<footer>
 			<jsp:include page="footer.jsp" />

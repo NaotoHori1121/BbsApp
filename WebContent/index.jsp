@@ -4,7 +4,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta name="viewport" charset="UTF-8"
+	content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="stylesheet" href="css/index.css">
 <title>solveトップ</title>
 
@@ -39,9 +40,10 @@
 				<p>プログラミングについて自由に話し合いができる場となっています</p>
 				<p>経験者はもちろんのこと初学者の方でも是非ご自由に参加してください</p>
 			</div>
-
-			<a href="userLogin.jsp" class="button">ユーザーログイン</a> <a
-				href="adminLogin.jsp" class="button">管理者ログイン</a>
+			<div class="login_button">
+				<a href="userLogin.jsp" class="button1">ユーザーログイン</a> <a
+					href="adminLogin.jsp" class="button2">管理者ログイン</a>
+			</div>
 
 			<p class="newregister">
 				アカウントをお持ちでない場合はこちら<a href="newRegister.jsp"><span

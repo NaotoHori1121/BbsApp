@@ -4,7 +4,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta name="viewport" charset="UTF-8"
+	content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="stylesheet" href="css/newThread.css">
 <title>スレッド作成</title>
 </head>
@@ -32,7 +33,7 @@
 					<dd>
 						<input type="text" name="name" value="${name }" readonly>
 					</dd>
-					<dt>スレッドタイトル</dt>
+					<dt>タイトル</dt>
 					<dd>
 						<input type="text" name="title" placeholder="title" maxlength="40"
 							required>

@@ -36,6 +36,7 @@ body {
 	background-color: white;
 	border-radius: 10px;
 	margin: 10px 30px;
+	cursor: pointer;
 }
 
 .backbutton:hover {
@@ -55,9 +56,8 @@ body {
 
 .solve {
 	text-align: center;
-	width: 470px;
+	width: 50%;
 	margin-top: 50px;
-	padding-right: 60px;
 }
 
 .userinfo {
@@ -105,4 +105,77 @@ footer {
 	text-align: right;
 	margin-top: auto;
 	font-size: 14px;
+}
+
+/*タブレット用の設定*/
+@media screen and (max-width:1024px) {
+	body html .wrapper{
+		width: 100%;
+		height: auto;
+	}
+	.main {
+		width: 75%;
+		height: auto;
+		margin: auto;
+		padding: 50px 25px;
+	}
+
+	.solve {
+		width: 40%;
+		margin: 20px auto 0;
+		padding-right: 0px;
+	}
+	.image{
+		width:22px;
+		height:23px;
+	}
+	.input p{
+	display: flex;
+	padding-bottom: 50px;
+	margin:0 auto;
+	}
+	.button{
+	margin:0 auto -30px;
+	}
+	.userinfo{
+	width:70%;
+	margin:0 auto;
+	}
+}
+
+
+/*スマホ用の設定*/
+@media screen and (max-width:480px) {
+	body html .wrapper{
+		width: 100%;
+		height: auto;
+	}
+	.main {
+		width: 75%;
+		height: auto;
+		margin: auto;
+		padding: 10px 25px;
+	}
+
+	.solve {
+		width: 50%;
+		margin: 20px auto 0;
+		padding-right: 0px;
+	}
+	.image{
+		width:22px;
+		height:23px;
+	}
+	.input p{
+	display: flex;
+	padding-bottom: 50px;
+	margin:0 auto;
+	}
+	.button{
+	margin:0 auto -30px;
+	}
+	.userinfo{
+	width:70%;
+	margin:0 auto;
+	}
 }

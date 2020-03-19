@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP');
 
 html {
@@ -7,6 +8,7 @@ html {
 	width: 100%;
 	margin: 0;
 }
+
 body, .wrapper {
 	display: flex;
 	flex-direction: column;
@@ -20,55 +22,39 @@ body {
 	background-color: white;
 	width: 100%;
 	height: 100%;
-
+}
+header{
+	overflow: visivle;
 }
 
-header {
-	width: 100%;
-	border-bottom: groove 1px gray;
-	background-color: #dbdbdb200200200;
-	height: 50px;
-	z-index: 999;
-}
-
-header ul {
-	list-style: none;
-	margin:0;
-	display: flex;
-}
-
-header ul li {
-	width: calc(100%/ 3);
-	font-size: 18px;
-	padding-top: 12px;
-	color:rgb(62,58,57);
-}
 a {
-	color: rgb(62,58,57);
+	color: rgb(62, 58, 57);
 	text-decoration: none;
 }
 
 header a:hover {
 	opacity: 0.5;
 }
-.container{
+
+.container {
 	justify-content: space-between;
 	display: flex;
-	margin:0 auto;
+	margin: 0 auto;
 	position: relative;
 }
-main{
-	width:70%;
-	margin:90px 30px 0px;
-	text-align: center;
 
+main {
+	width: 70%;
+	margin: 90px 30px 0px;
+	text-align: center;
 }
-.threadinfo{
-	margin-right:120px;
-	margin-bottom:70px;
-	padding:0 60px;
-	width:800px;
-	height:200px;
+
+.threadinfo {
+	margin-right: 120px;
+	margin-bottom: 70px;
+	padding: 0 60px;
+	width: 800px;
+	height: 200px;
 	border: solid 3px olive;
 	text-align: center;
 	font-size: 15px;
@@ -76,54 +62,58 @@ main{
 	line-height: 40px;
 	background-color: #d2cece12;
 }
-.threadinfo dt{
+
+.threadinfo dt {
 	font-size: 22px;
 	border-bottom: solid 1px silver;
 }
-.threadinfo dd{
+
+.threadinfo dd {
 	line-height: 22px;
-	margin-inline-start:0;
+	margin-inline-start: 0;
 }
 
-.threadinfo dd.threadcreateuser{
-	padding-top:40px;
+.threadinfo dd.threadcreateuser {
+	padding-top: 40px;
 	text-align: right;
 }
-.threadinfo dd.explain{
+
+.threadinfo dd.explain {
 	padding-top: 30px;
 }
 
-.allcomment ul{
+.allcomment ul {
 	width: 93%;
 	list-style: none;
-	margin-right:140px;
-	border:solid 3px gray;
-	padding-inline-start:0;
+	margin-right: 140px;
+	border: solid 3px gray;
+	padding-inline-start: 0;
 	border-radius: 6px;
 	background-color: #d2cece12;
 }
-.allcomment ul li.userandtime{
+
+.allcomment ul li.userandtime {
 	text-align: left;
 	line-height: 60px;
 }
-.allcomment ul li.comment{
-  word-wrap: normal;
-  line-height: 20px;
-  padding-bottom: 20px;
-  font-size:18px;
-  text-decoration: underline;
+
+.allcomment ul li.comment {
+	word-wrap: normal;
+	line-height: 20px;
+	padding-bottom: 20px;
+	font-size: 18px;
+
 }
 
-
-.commentform{
-	top:40px;
-	position:-webkit-sticky;
-  position: sticky;
-	margin-top:105px;
-	margin-right:60px;
-	padding:0 30px 0px;
-	width:100%;
-	height:550px;
+.commentform {
+	top: 40px;
+	position: -webkit-sticky;
+	position: sticky;
+	margin-top: 105px;
+	margin-right: 60px;
+	padding: 0 30px 0px;
+	width: 80%;
+	height: 550px;
 	border: solid 3px gray;
 	text-align: center;
 	font-size: 15px;
@@ -131,24 +121,30 @@ main{
 	line-height: 40px;
 	background-color: #d2cece12;
 }
-.formtitle{
+
+.formtitle {
 	font-size: 16px;
 }
-.commentform dl{
+
+.commentform dl {
 
 }
-.commentform dl dd{
+
+.commentform dl dd {
 	margin-inline-start: 0;
 }
-textarea{
-	width:100%;
-	height:250px;
+
+textarea {
+	width: 100%;
+	height: 250px;
 	resize: none;
 	border: solid 2px silver;
 }
-input{
-	border:solid 2px silver;
+
+input {
+	border: solid 2px silver;
 }
+
 .button {
 	padding: 4px 30px;
 	border: solid 2px silver;
@@ -160,18 +156,18 @@ input{
 	background-color: white;
 	border-radius: 10px;
 	margin: 10px 30px;
-	 cursor : pointer;
+	cursor: pointer;
 }
 
 .button:hover {
-
 	background-color: white;
 	border-color: black;
 }
 
 .solve {
-	width: 280px;
+	width: 160px;
 }
+
 #pageTop {
 	position: fixed;
 	bottom: 20px;
@@ -190,7 +186,7 @@ input{
 	width: 35px;
 	height: 35px;
 	background-color: #9FD6D2;
-	color: rgb(62,58,57);
+	color: rgb(62, 58, 57);
 	font-weight: bold;
 	text-decoration: none;
 	text-align: left;
@@ -200,8 +196,285 @@ input{
 	text-decoration: none;
 	opacity: 0.7;
 }
+
 footer {
 	text-align: right;
 	margin-top: auto;
 	font-size: 14px;
+}
+
+/*タブレット用の設定*/
+@media screen and (max-width:1024px) {
+		body html .wrapper {
+		width: 100%;
+		height: auto;
+	}
+	header {
+		overflow: visible;
+	}
+	.container {
+		width: 100%;
+		display: flex;
+		overflow: visible;
+		flex-direction: column-reverse;
+	}
+	.wrapper {
+		overflow: visible;
+	}
+	main {
+		width: 100%;
+		height: auto;
+		margin: 0 auto;
+		padding: 10px 0px;
+		display: column;
+	}
+	.commentform, .threadinfo, .allcomment {
+		width: 90%;
+		margin: 0 auto;
+		padding: 5px;
+	}
+	.commentform {
+	margin-top:80px;
+		top: 0px;
+		position: -webkit-sticky;
+		position: sticky;
+		width: 90%;
+		height: 195px;
+		border: solid 3px gray;
+		text-align: center;
+		font-size: 15px;
+		border-radius: 12px;
+		background-color: #d2cece12;
+	}
+	.allcomment{
+	width:97%;
+	margin:0 auto;
+	}
+	.userandtime{
+	font-size: 14px;
+	}
+	.allcomment ul li.userandtime {
+    line-height: 30px;
+}
+	.allcomment ul li.comment{
+	text-align:left;
+	font-size:13px;
+	padding: 6px;
+	}
+	.formtitle, .postuser {
+		display: none;
+	}
+	.commentform dt, .commentform dd {
+		margin: 0 auto;
+	}
+	.threadinfo{
+	height:auto;
+	}
+	.threadinfo dd.explain {
+    padding-top: 0px;
+}
+.threadinfo dd.threadcreateuser {
+    padding-top: 10px;
+    text-align: right;
+}
+	textarea {
+		width: 70%;
+		height: 90px;
+		resize: none;
+		margin: 0 auto;
+		border: solid 2px silver;
+	}
+	.threads, .side {
+		width: 100%;
+		margin: 0 auto;
+	}
+	.solve {
+		width: 100px;
+	}
+	.languagelist ul {
+		overflow-x: auto;
+		white-space: nowrap;
+	}
+	.languagelist ul li {
+		display: inline-block;
+		width: 22%;
+	}
+	.username {
+		font-size: 12px;
+	}
+	.threads ul {
+		margin: 0 auto;
+	}
+	.threads {
+		width: 90%;
+		margin: 0 auto;
+	}
+	.side {
+		width: 100%;
+		margin: 0 auto;
+	}
+	.side a {
+		border: solid 3px silver;
+		border-radius: 8px;
+		padding: 3px;
+	}
+	.side p {
+		margin: 30px auto;
+	}
+	.search {
+		display: flex;
+		justify-content: center;
+		margin-top: 15px;
+	}
+	.search p {
+		margin: 10px 10px;
+	}
+	.button {
+		margin: 0 auto;
+	}
+	dl {
+		display: block;
+		margin-block-start: 0em;
+		margin-block-end: 0em;
+		margin-inline-start: 0px;
+		margin-inline-end: 0px;
+	}
+}
+
+/*スマホ用の設定*/
+@media screen and (max-width:480px) {
+	body html .wrapper {
+		width: 100%;
+		height: auto;
+	}
+	header {
+		overflow: visible;
+	}
+	.container {
+		width: 100%;
+		display: flex;
+		overflow: visible;
+		flex-direction: column-reverse;
+	}
+	.wrapper {
+		overflow: visible;
+	}
+	main {
+		width: 100%;
+		height: auto;
+		margin: 0 auto;
+		padding: 10px 0px;
+		display: column;
+	}
+	.commentform, .threadinfo, .allcomment {
+		width: 90%;
+		margin: 0 auto;
+		padding: 5px;
+	}
+	.commentform {
+	margin-top:80px;
+		top: 0px;
+		position: -webkit-sticky;
+		position: sticky;
+		width: 90%;
+		height: 195px;
+		border: solid 3px gray;
+		text-align: center;
+		font-size: 15px;
+		border-radius: 12px;
+		background-color: #d2cece12;
+	}
+	.allcomment{
+	width:97%;
+	margin:0 auto;
+	}
+	.userandtime{
+	font-size: 14px;
+	}
+	.allcomment ul li.userandtime {
+    line-height: 30px;
+}
+	.allcomment ul li.comment{
+	text-align:left;
+	font-size:13px;
+	padding: 6px;
+	}
+	.formtitle, .postuser {
+		display: none;
+	}
+	.commentform dt, .commentform dd {
+		margin: 0 auto;
+	}
+	.threadinfo{
+	height:auto;
+	}
+	.threadinfo dd.explain {
+    padding-top: 0px;
+}
+.threadinfo dd.threadcreateuser {
+    padding-top: 10px;
+    text-align: right;
+}
+	textarea {
+		width: 70%;
+		height: 90px;
+		resize: none;
+		margin: 0 auto;
+		border: solid 2px silver;
+	}
+	.threads, .side {
+		width: 100%;
+		margin: 0 auto;
+	}
+	.solve {
+		width: 100px;
+	}
+	.languagelist ul {
+		overflow-x: auto;
+		white-space: nowrap;
+	}
+	.languagelist ul li {
+		display: inline-block;
+		width: 22%;
+	}
+	.username {
+		font-size: 12px;
+	}
+	.threads ul {
+		margin: 0 auto;
+	}
+	.threads {
+		width: 90%;
+		margin: 0 auto;
+	}
+	.side {
+		width: 100%;
+		margin: 0 auto;
+	}
+	.side a {
+		border: solid 3px silver;
+		border-radius: 8px;
+		padding: 3px;
+	}
+	.side p {
+		margin: 30px auto;
+	}
+	.search {
+		display: flex;
+		justify-content: center;
+		margin-top: 15px;
+	}
+	.search p {
+		margin: 10px 10px;
+	}
+	.button {
+		margin: 0 auto;
+	}
+	dl {
+		display: block;
+		margin-block-start: 0em;
+		margin-block-end: 0em;
+		margin-inline-start: 0px;
+		margin-inline-end: 0px;
+	}
 }

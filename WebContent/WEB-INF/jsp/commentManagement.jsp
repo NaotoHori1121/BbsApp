@@ -4,7 +4,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta name="viewport" charset="UTF-8"
+	content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="stylesheet" href="css/commentManagement.css">
 <title>コメント管理</title>
 </head>
@@ -30,7 +31,7 @@
 				削除するワード:<input type="text" name="word" required>
 			</p>
 
-			<p>
+			<p style="margin-top:30px;">
 				<input type="submit" value="削除" class="button">
 			</p>
 

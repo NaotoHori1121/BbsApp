@@ -19,17 +19,19 @@ body {
 	background-size: cover;
 	font-family: 'Noto Serif JP', sans-serif;
 	text-align: center;
-	height: 100%;
+	height: 100vh;
 	width: 100%;
-	margin:0;
+	margin: 0;
 }
 
-header{
+header {
 	padding-top: 35px;
+	margin: 0 auto;
+	width: 100%;
 }
 
 .main {
-	width: 650px;
+	width: 40%;
 	margin: 20px auto;
 	padding: 30px;
 	border: 1px solid #555;
@@ -42,48 +44,46 @@ h2 {
 	color: white;
 	font-size: 22px;
 	text-decoration: underline;
-
 }
 
 .explain {
 	color: silver;
 	line-height: 1.5;
 	font-size: 14px;
-	padding:0px 0px 20px;
+	padding: 0px 0px 20px;
 }
 
 .solve {
 	width: 700px;
 	padding-left: 50px;
+	margin: 0 auto;
 }
 
 .explainmessage {
 	font-size: 18px;
 	color: orange;
 	text-decoration: underline wavy silver;
-
 }
 
-a.button {
+a.button1, a.button2 {
 	padding: 6px 20px;
 	border: solid 2px gray;
 	text-decoration: none;
 	color: black;
-	font-weight:bold;
+	font-weight: bold;
 	font-size: 16px;
 	opacity: 0.7;
 	background-color: white;
 	border-radius: 10px;
-	margin:0px 30px;
+	margin: 0px 30px;
 	cursor: pointer;
-
 }
 
-a.button:hover {
+a.button1:hover, a.button2:hover {
 	opacity: 0.3;
 	background-color: white;
 	box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
-  	transform: translateY(-0.1875em);
+	transform: translateY(-0.1875em);
 }
 
 .newregister {
@@ -96,10 +96,10 @@ a.button:hover {
 	font-size: 18px;
 	text-decoration: underline solid white;
 }
-.newregisterlink:hover{
+
+.newregisterlink:hover {
 	opacity: 0.3;
 }
-
 
 footer {
 	color: white;
@@ -107,7 +107,83 @@ footer {
 	margin-top: auto;
 	font-size: 14px;
 }
-.successmessage{
-	color:yellow;
+
+.successmessage {
+	color: yellow;
 	text-decoration: underline;
 }
+
+/*タブレット用の設定*/
+@media screen and (max-width:1024px) {
+	body html .wrapper header {
+		width: 100%;
+		height: auto;
+	}
+	header {
+		padding-top: 0px;
+	}
+	.main {
+		width: 75%;
+		height: auto;
+		margin: 0 auto;
+		padding: 10px 25px;
+	}
+	.main h2 {
+		font-size: 18px;
+	}
+	.explainmessage {
+		font-size: 16px;
+	}
+	.solve {
+		width: 80%;
+		margin: 0 auto;
+	}
+	a.button1 {
+		margin-bottom: 40px;
+	}
+	.login_button {
+		display: flex;
+		flex-direction: column;
+	}
+	.explain {
+		line-height: 1.0;
+	}
+}
+
+/*スマホ用の設定*/
+@media screen and (max-width:480px) {
+	body html .wrapper header {
+		width: 100%;
+		height: auto;
+	}
+	header {
+		padding-top: 0px;
+	}
+	.main {
+		width: 75%;
+		height: auto;
+		margin: 0 auto;
+		padding: 10px 25px;
+	}
+	.main h2 {
+		font-size: 18px;
+	}
+	.explainmessage {
+		font-size: 16px;
+	}
+	.solve {
+		width: 80%;
+		margin: 0 auto;
+	}
+	a.button1 {
+		margin-bottom: 40px;
+	}
+	.login_button {
+		display: flex;
+		flex-direction: column;
+	}
+	.explain {
+		line-height: 1.0;
+	}
+}
+
