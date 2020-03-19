@@ -370,8 +370,6 @@ footer {
 	.commentform {
 		margin-top:100px;
 		padding:5px;
-		position: -webkit-sticky;
-		position: sticky;
 		width: 90%;
 		height: 195px;
 		border: solid 3px gray;
