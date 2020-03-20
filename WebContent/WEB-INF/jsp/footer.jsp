@@ -1,3 +1,3 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<p>&copy;2020NaotoHori</p>
+<p>&copy;2020Hori</p>
