@@ -1,5 +1,7 @@
 # BbsApp  
-プログラミングについて自由に掲示板作成やコメント書き込みができる会員制掲示板WEBアプリです。
+プログラミングについて自由に掲示板作成やコメント書き込みができる会員制掲示板WEBアプリです。  
+
+
 It is a membership system bulletin board WEB application that can freely create a bulletin board and write comments about programming.
 
 
