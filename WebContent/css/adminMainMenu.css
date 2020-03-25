@@ -34,6 +34,7 @@ body {
 	background-color: white;
 	border-radius: 10px;
 	margin: 10px 30px;
+	cursor: pointer;
 }
 
 .backbutton:hover {
@@ -45,7 +46,7 @@ main {
 	width: 750px;
 	height: 180px;
 	margin: 200px auto;
-	padding: 20px;
+	padding: 20px 0px 60px;
 	text-align: center;
 	background-color: white;
 	opacity: 0.8;
@@ -71,6 +72,7 @@ main ul {
 	background-color: white;
 	border-radius: 10px;
 	margin: 30px;
+	cursor: pointer;
 }
 
 .button:hover {
