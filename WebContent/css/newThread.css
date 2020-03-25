@@ -81,6 +81,7 @@ dl dd input,dl dd select{
 	padding: 7px;
 	border-radius: 12px;
 	outline: 0;
+	cursor: pointer;
 }
 dl dd textarea{
 	width: 190px;
