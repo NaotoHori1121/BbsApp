@@ -37,7 +37,7 @@
 			<input type="checkbox" class="luxbar-checkbox" id="luxbar-checkbox" />
 			<div class="luxbar-menu luxbar-menu-right luxbar-menu-light">
 				<ul class="luxbar-navigation">
-					<li class="luxbar-header"><a href="WebContent/jsp/userMainMenu.jsp" class="luxbar-brand"><img
+					<li class="luxbar-header"><a href="BackMainMenuServlet" class="luxbar-brand"><img
 							class="solve" src="./image/logologologo.png"></a> <span>ユーザー名:<c:out value="${name}" /></span>
 							<label
 						class="luxbar-hamburger luxbar-hamburger-doublespin"
