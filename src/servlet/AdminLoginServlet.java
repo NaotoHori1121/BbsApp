@@ -28,7 +28,7 @@ public class AdminLoginServlet extends HttpServlet {
 
 		//passwordの暗号化
 		Base64EnCrypt base64EnCrypt = new Base64EnCrypt();
-		String adminPassword = base64EnCrypt.enCodePassword(request.getParameter("password"));
+		String adminPassword = base64EnCrypt.enCodePassword(request.getParameter("adminpassword"));
 
 		//ログイン処理
 		UserBean admin = new UserBean(adminName,adminPassword);
