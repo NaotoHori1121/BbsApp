@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import crypt.Base64EnCrypt;
 import model.UserBean;
 import model.UserLogic;
 
@@ -24,7 +25,10 @@ public class AdminLoginServlet extends HttpServlet {
 			throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 		String adminName = request.getParameter("adminname");
-		String adminPassword = request.getParameter("adminpassword");
+
+		//passwordの暗号化
+		Base64EnCrypt base64EnCrypt = new Base64EnCrypt();
+		String adminPassword = base64EnCrypt.enCodePassword(request.getParameter("password"));
 
 		//ログイン処理
 		UserBean admin = new UserBean(adminName,adminPassword);

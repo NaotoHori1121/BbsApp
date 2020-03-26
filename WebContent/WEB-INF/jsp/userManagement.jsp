@@ -60,7 +60,7 @@
 					<tr>
 						<th>ユーザーID: <c:out value="${users.getId()}" /></th>
 						<th>ユーザー名: <c:out value="${users.getName()}" /></th>
-						<th>パスワード: <c:out value="${users.getPassword()}" /></th>
+
 
 						<th><input type="submit" value="削除" class="button"></th>
 					</tr>

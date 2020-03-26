@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import crypt.Base64EnCrypt;
 import model.ThreadBean;
 import model.ThreadLogic;
 import model.UserBean;
@@ -26,7 +27,10 @@ public class UserLoginServlet extends HttpServlet {
 			throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 		String userName = request.getParameter("name");
-		String userPassword = request.getParameter("password");
+
+		//passwordの暗号化
+		Base64EnCrypt base64EnCrypt = new Base64EnCrypt();
+		String userPassword = base64EnCrypt.enCodePassword(request.getParameter("password"));
 
 		//ログイン処理を行う
 		UserBean user = new UserBean(userName,userPassword);
